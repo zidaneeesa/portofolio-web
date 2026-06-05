@@ -24,15 +24,6 @@ export default function Skills({ scrollToSection }) {
     },
   ];
 
-  const getPercentage = (level) => {
-    switch (level) {
-      case 'Expert': return 95;
-      case 'Advanced': return 85;
-      case 'Intermediate': return 70;
-      default: return 60;
-    }
-  };
-
   return (
     <section id="skills" className="section skills-section">
       <div className="skills-container animate-fade-in">
@@ -48,17 +39,9 @@ export default function Skills({ scrollToSection }) {
               </div>
               <div className="skills-list">
                 {cat.skills.map((skill, index) => (
-                  <div key={index} className="skill-item">
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-level">{skill.level}</span>
-                    </div>
-                    <div className="progress-bar-track">
-                      <div 
-                        className="progress-bar-fill" 
-                        style={{ width: `${getPercentage(skill.level)}%` }}
-                      ></div>
-                    </div>
+                  <div key={index} className="skill-tag">
+                    <span className="skill-name">{skill.name}</span>
+                    <span className="skill-level">{skill.level}</span>
                   </div>
                 ))}
               </div>

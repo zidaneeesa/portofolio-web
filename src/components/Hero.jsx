@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ChevronDown, Mail, Send } from 'lucide-react';
 import { profileData } from '../data';
 
@@ -19,51 +19,15 @@ const GithubIcon = ({ size = 20 }) => (
 );
 
 export default function Hero({ scrollToSection }) {
-  const [typedText, setTypedText] = useState('');
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const phrases = profileData.subtitles;
-  const typingSpeed = 100;
-  const deletingSpeed = 50;
-  const delayBetweenPhrases = 2000;
-
-  useEffect(() => {
-    let timer;
-    const currentPhrase = phrases[phraseIndex];
-
-    if (isDeleting) {
-      // Deleting text character by character
-      timer = setTimeout(() => {
-        setTypedText(currentPhrase.substring(0, typedText.length - 1));
-      }, deletingSpeed);
-    } else {
-      // Typing text character by character
-      timer = setTimeout(() => {
-        setTypedText(currentPhrase.substring(0, typedText.length + 1));
-      }, typingSpeed);
-    }
-
-    // Handle switching states
-    if (!isDeleting && typedText === currentPhrase) {
-      // Wait before starting deletion
-      timer = setTimeout(() => setIsDeleting(true), delayBetweenPhrases);
-    } else if (isDeleting && typedText === '') {
-      setIsDeleting(false);
-      setPhraseIndex((prev) => (prev + 1) % phrases.length);
-    }
-
-    return () => clearTimeout(timer);
-  }, [typedText, isDeleting, phraseIndex, phrases]);
-
   return (
     <section id="hero" className="section hero-section">
       <div className="hero-content animate-fade-in">
         <h3 className="hero-greeting">Halo, saya</h3>
         <h1 className="hero-name">{profileData.name}</h1>
         
-        <div className="hero-typewriter">
-          Saya seorang <span className="typing-cursor typed-text">{typedText}</span>
-        </div>
+        <h2 className="hero-subtitle">
+          {profileData.title}
+        </h2>
 
         <p className="hero-description">
           Mahasiswa Teknik Informatika yang antusias mengembangkan solusi digital berbasis web, mobile, computer vision, dan Internet of Things (IoT).
