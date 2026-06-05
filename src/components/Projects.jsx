@@ -145,11 +145,13 @@ export default function Projects({ scrollToSection }) {
                       <div className="camera-header">
                         <span className="camera-dot"></span> LIVE FEED [CAM-01]
                       </div>
-                      <div className="camera-screen">
-                        <div className="camera-plate-box">
-                          <span className="plate-text">B 1387 DKC</span>
-                          <span className="confidence-text">YOLOv8: 98.4%</span>
-                        </div>
+                      <div className="camera-screen" style={{ padding: 0 }}>
+                        <img 
+                          src="/gerbang_iot.png" 
+                          alt="SI-GERBANG IoT & Camera Detection" 
+                          className="screenshot-img"
+                          style={{ objectFit: 'cover', height: '100%', width: '100%' }}
+                        />
                         <div className="camera-status-indicator">
                           AKSES DIBUKA
                         </div>
