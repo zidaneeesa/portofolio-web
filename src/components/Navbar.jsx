@@ -33,7 +33,7 @@ export default function Navbar({ activeSection, scrollToSection }) {
   };
 
   return (
-    <header className="navbar-header glass-card">
+    <header className="navbar-header">
       <div className="navbar-container">
         {/* Logo */}
         <a href="#hero" onClick={(e) => { e.preventDefault(); handleNavClick('hero'); }} className="navbar-logo">

@@ -1415,6 +1415,7 @@ textarea.form-input {
    HERO SECTION
    ========================================== */
 .hero-section {
+  padding-top: 140px;
   text-align: center;
   gap: 1.5rem;
 }
@@ -1480,6 +1481,15 @@ textarea.form-input {
   padding: 12px 24px;
   border-radius: 50px;
   background: var(--nav-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 20px var(--shadow-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.2s ease;
+}
+
+.navbar-header:hover {
+  border-color: rgba(var(--accent-rgb), 0.25);
 }
 
 .navbar-container {
