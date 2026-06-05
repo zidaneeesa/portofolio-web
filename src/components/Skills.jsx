@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronDown, Code, Smartphone, Database, Zap, BookOpen, Settings } from 'lucide-react';
+import { ChevronDown, Zap } from 'lucide-react';
 import { skillsData } from '../data';
 
 export default function Skills({ scrollToSection }) {
@@ -7,19 +7,16 @@ export default function Skills({ scrollToSection }) {
     {
       key: 'web',
       title: 'Web Development',
-      icon: <Code size={24} className="category-icon" />,
       skills: skillsData.web,
     },
     {
       key: 'mobile',
       title: 'Mobile Development',
-      icon: <Smartphone size={24} className="category-icon" />,
       skills: skillsData.mobile,
     },
     {
       key: 'dbAndTools',
-      title: 'Database, Tools & Specialized',
-      icon: <Database size={24} className="category-icon" />,
+      title: 'Database & Tools',
       skills: skillsData.dbAndTools,
     },
   ];
@@ -30,18 +27,18 @@ export default function Skills({ scrollToSection }) {
         <h2 className="title-large">Skills</h2>
         <p className="subtitle-small">kemampuan <span>teknis & personal</span></p>
 
-        <div className="skills-grid">
+        <div className="glass-card skills-rows-container">
           {categories.map((cat) => (
-            <div key={cat.key} className="glass-card skill-category-card">
-              <div className="category-header">
-                {cat.icon}
-                <h3>{cat.title}</h3>
+            <div key={cat.key} className="skills-row-item">
+              <div className="skills-row-category">
+                <span className="skills-row-bullet">●</span>
+                <h3>// {cat.title}</h3>
               </div>
-              <div className="skills-list">
+              <div className="skills-row-tags">
                 {cat.skills.map((skill, index) => (
-                  <div key={index} className="skill-tag">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-level">{skill.level}</span>
+                  <div key={index} className="skill-row-tag">
+                    <span className="skill-row-tag-name">{skill.name}</span>
+                    <span className="skill-row-tag-level">{skill.level}</span>
                   </div>
                 ))}
               </div>

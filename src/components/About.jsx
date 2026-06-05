@@ -1,8 +1,15 @@
 import React from 'react';
-import { ChevronDown, GraduationCap, Briefcase, User, Calendar, Mail, BookOpen } from 'lucide-react';
+import { ChevronDown, GraduationCap, Briefcase, Calendar } from 'lucide-react';
 import { profileData, timelineData } from '../data';
 
 export default function About({ scrollToSection }) {
+  const details = [
+    { label: 'Status', value: 'Mahasiswa Aktif' },
+    { label: 'Fokus Area', value: 'Web & Mobile Dev' },
+    { label: 'Universitas', value: 'Polije (TI)' },
+    { label: 'Domisili', value: 'Jember, Indonesia' }
+  ];
+
   return (
     <section id="about" className="section about-section">
       <div className="about-container animate-fade-in">
@@ -10,61 +17,49 @@ export default function About({ scrollToSection }) {
         <p className="subtitle-small">biodata & <span>riwayat</span></p>
 
         <div className="about-grid">
-          {/* Left Column: Biodata Glass Card */}
-          <div className="glass-card bio-card">
-            <div className="bio-header">
-              <div className="avatar-placeholder">
-                <User size={40} className="avatar-icon" />
-              </div>
-              <div>
-                <h3 className="bio-name">{profileData.name}</h3>
-                <p className="bio-nim">NIM. {profileData.nim}</p>
-              </div>
-            </div>
-
-            <div className="bio-content">
+          {/* Left Column: Biodata & Stats */}
+          <div className="about-left-col">
+            <div className="glass-card bio-card">
+              <h3 className="bio-title">// DETAIL SINGKAT</h3>
               <p className="bio-text">
                 {profileData.aboutBio}
               </p>
 
-              <div className="bio-details">
-                <div className="detail-item">
-                  <Mail size={16} />
-                  <span>{profileData.email}</span>
-                </div>
-                <div className="detail-item">
-                  <BookOpen size={16} />
-                  <span>Politeknik Negeri Jember</span>
-                </div>
+              {/* Detail Grid */}
+              <div className="details-grid">
+                {details.map((detail, index) => (
+                  <div key={index} className="details-item">
+                    <span className="details-label">{detail.label}</span>
+                    <span className="details-val">{detail.value}</span>
+                  </div>
+                ))}
               </div>
 
-              <div className="bio-interests">
-                <h4>Minat Bidang:</h4>
-                <div className="interest-tags">
-                  {profileData.interests.map((interest, index) => (
-                    <span key={index} className="tag">{interest}</span>
-                  ))}
+              {/* Stats Row */}
+              <div className="stats-row">
+                <div className="stat-card">
+                  <div className="stat-number">5+</div>
+                  <div className="stat-label">Proyek Selesai</div>
                 </div>
-              </div>
-
-              <div className="bio-readiness glass-card">
-                <h5>Status Kesiapan:</h5>
-                <p>Siap terlibat dalam proyek nyata (real project) berbasis tim maupun individu.</p>
+                <div className="stat-card">
+                  <div className="stat-number">3+</div>
+                  <div className="stat-label">Bidang Minat</div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right Column: Timeline */}
           <div className="timeline-container">
-            <h3 className="timeline-title">Pendidikan & Pengalaman</h3>
+            <h3 className="timeline-title">// PENDIDIKAN & PENGALAMAN</h3>
             <div className="timeline-items">
               {timelineData.map((item, index) => (
                 <div key={index} className="timeline-item">
                   <div className="timeline-badge">
                     {item.type === 'education' ? (
-                      <GraduationCap size={18} />
+                      <GraduationCap size={14} />
                     ) : (
-                      <Briefcase size={18} />
+                      <Briefcase size={14} />
                     )}
                   </div>
                   <div className="timeline-content glass-card">

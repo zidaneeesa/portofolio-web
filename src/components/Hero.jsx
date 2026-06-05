@@ -22,6 +22,10 @@ export default function Hero({ scrollToSection }) {
   return (
     <section id="hero" className="section hero-section">
       <div className="hero-content animate-fade-in">
+        <div className="status-badge">
+          <span className="status-dot"></span>
+          Tersedia Untuk Magang / Proyek
+        </div>
         <h3 className="hero-greeting">Halo, saya</h3>
         <h1 className="hero-name">{profileData.name}</h1>
         
