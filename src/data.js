@@ -86,7 +86,7 @@ export const projectsData = [
     title: "E-Library SMAN 4 Jember",
     category: "Web & Mobile App",
     role: "Full Stack Developer",
-    year: "2024",
+    year: "2026",
     tech: ["Laravel", "PHP", "MySQL", "CSS", "JavaScript"],
     description: "Sistem perpustakaan sekolah digital untuk SMAN 4 Jember guna memfasilitasi akses buku digital, manajemen rekapitulasi pengunjung, dan pendataan sirkulasi.",
     highlights: ["E-book reader internal", "Grafik statistik harian", "Akses akun siswa & guru"]
@@ -105,7 +105,7 @@ export const timelineData = [
     type: "project",
     title: "Pengembangan E-Library SMAN 4 Jember",
     subtitle: "Full Stack Developer",
-    date: "2024",
+    date: "2026",
     description: "Mendesain dan mengimplementasikan sistem perpustakaan sekolah digital untuk menunjang literasi guru dan siswa."
   },
   {
