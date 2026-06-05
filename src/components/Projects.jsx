@@ -125,16 +125,35 @@ export default function Projects({ scrollToSection }) {
                     </div>
                   </div>
                 ) : project.id === 'gerbang-otomatis' ? (
-                  <div className="mockup-web">
-                    <div className="browser-header">
-                      <span></span><span></span><span></span>
+                  <div className="mockup-layered">
+                    {/* Background Web Dashboard (Data Plat Terverifikasi) */}
+                    <div className="mockup-web">
+                      <div className="browser-header">
+                        <span></span><span></span><span></span>
+                      </div>
+                      <div className="browser-body" style={{ padding: 0 }}>
+                        <img 
+                          src="/gerbang_web.png" 
+                          alt="SI-GEBA Web Dashboard" 
+                          className="screenshot-img" 
+                        />
+                      </div>
                     </div>
-                    <div className="browser-body" style={{ padding: 0 }}>
-                      <img 
-                        src="/gerbang_web.png" 
-                        alt="SI-GEBA Web Dashboard" 
-                        className="screenshot-img" 
-                      />
+                    
+                    {/* Foreground: Live Camera Detection Feed (IoT/Hardware Implementation) */}
+                    <div className="mockup-camera-feed">
+                      <div className="camera-header">
+                        <span className="camera-dot"></span> LIVE FEED [CAM-01]
+                      </div>
+                      <div className="camera-screen">
+                        <div className="camera-plate-box">
+                          <span className="plate-text">B 1387 DKC</span>
+                          <span className="confidence-text">YOLOv8: 98.4%</span>
+                        </div>
+                        <div className="camera-status-indicator">
+                          AKSES DIBUKA
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ) : project.id === 'tukang-pangkas-rambut' ? (
