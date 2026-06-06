@@ -110,9 +110,9 @@ export const timelineData = [
   },
   {
     type: "education",
-    title: "SMAN 4 Jember",
-    subtitle: "MIPA (Matematika & Ilmu Pengetahuan Alam)",
+    title: "SMKN 6 Jember",
+    subtitle: "RPL (Rekayasa Perangkat Lunak)",
     date: "2020 - 2023",
-    description: "Aktif berorganisasi dan mendalami dasar-dasar ilmu komputer serta matematika logika."
+    description: "Mendalami dasar-dasar pemrograman perangkat lunak, algoritma, basis data, serta pengembangan aplikasi web dan mobile."
   }
 ];
