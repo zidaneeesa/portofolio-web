@@ -20,9 +20,13 @@ export const skillsData = {
     { name: "HTML", level: "Expert" },
     { name: "CSS", level: "Expert" },
     { name: "JavaScript", level: "Advanced" },
+    { name: "React", level: "Advanced" },
+    { name: "Vue.js", level: "Intermediate" },
     { name: "PHP", level: "Advanced" },
     { name: "Laravel", level: "Advanced" },
-    { name: "CodeIgniter", level: "Intermediate" }
+    { name: "CodeIgniter", level: "Intermediate" },
+    { name: "Python", level: "Advanced" },
+    { name: "Flask", level: "Intermediate" }
   ],
   mobile: [
     { name: "Kotlin", level: "Intermediate" },
