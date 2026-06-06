@@ -91,7 +91,7 @@ export const projectsData = [
     category: "Web & Mobile App",
     role: "Full Stack Developer",
     year: "2026",
-    tech: ["Laravel", "PHP", "MySQL", "CSS", "JavaScript"],
+    tech: ["Vue.js", "Laravel", "PHP", "MySQL", "CSS"],
     description: "Sistem perpustakaan sekolah digital untuk SMAN 4 Jember guna memfasilitasi akses buku digital, manajemen rekapitulasi pengunjung, dan pendataan sirkulasi.",
     highlights: ["E-book reader internal", "Grafik statistik harian", "Akses akun siswa & guru"]
   }
